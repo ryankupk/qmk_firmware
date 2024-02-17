@@ -1,4 +1,6 @@
 // SOFLE RGB
+// compile command: qmk compile -kb sofle/rev1 -km ryankupk -e CONVERT_TO=promicro_rp2040 -j 4
+// flash command: qmk flash -kb sofle/rev1 -km ryankupk -e CONVERT_TO=promicro_rp2040 -j 4
 
 #include QMK_KEYBOARD_H
 #include "common.h"
@@ -22,10 +24,6 @@
 #ifdef TAP_DANCE_ENABLE
     #include "tap_dance.c"
 #endif
-
-// #ifdef AUTOCORRECT_ENABLE
-//     #include "autocorrect_data.h"
-// #endif
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -176,11 +174,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case KC_QWERTY:
             if (record->event.pressed) {
+                tap_code16(AC_ON);
                 set_single_persistent_default_layer(_QWERTY);
             }
             return false;
         case KC_GAMING:
             if (record->event.pressed) {
+                tap_code16(AC_OFF);
                 set_single_persistent_default_layer(_GAMING);
             }
             return false;
