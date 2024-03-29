@@ -2,9 +2,15 @@
 
 enum {
     TD_QUOTE_BACKTICK,
+    TD_HOME,
+    TD_END,
+    TD_ESC,
 };
 
 tap_dance_action_t tap_dance_actions[] = {
     [TD_QUOTE_BACKTICK] = ACTION_TAP_DANCE_DOUBLE(KC_QUOTE, KC_GRV),
+    [TD_HOME] = ACTION_TAP_DANCE_DOUBLE(KC_LEFT, KC_HOME),
+    [TD_END] = ACTION_TAP_DANCE_DOUBLE(KC_RIGHT, KC_END),
+    [TD_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_GRV),
 };
 
