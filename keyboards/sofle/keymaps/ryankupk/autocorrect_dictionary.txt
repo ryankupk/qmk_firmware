@@ -1,3 +1,4 @@
+# qmk generate-autocorrect-data keyboards/sofle/keymaps/ryankupk/autocorrect_dictionary.txt -kb sofle -km ryankupk
 :acheiv       -> achiev
 :agian        -> again
 :agred        -> agreed
@@ -12,6 +13,7 @@
 :atthe        -> at the
 :casue        -> cause
 :choses       -> chooses
+:cna:         -> can
 :eveyr        -> every
 :foudn        -> found
 :gaurd        -> guard
@@ -110,6 +112,7 @@ aquire        -> acquire
 aroud         -> around
 arround       -> around
 arund         -> around
+assocaites    -> associates
 asthetic      -> aesthetic
 auxilary      -> auxiliary
 auxillary     -> auxiliary
@@ -172,6 +175,7 @@ cieling       -> ceiling
 circut        -> circuit
 claer         -> clear
 clasic        -> classic
+clound        -> cloud
 cmoputer      -> computer
 coform        -> conform
 cognizent     -> cognizant
@@ -374,6 +378,8 @@ propery       -> property
 propogate     -> propagate
 psuedo        -> pseudo
 publically    -> publicly
+pyton         -> python
+pytohn        -> python
 questionaire  -> questionnaire
 raelly        -> really
 realtion      -> relation
@@ -416,10 +422,8 @@ shoudl        -> should
 sieze         -> seize
 similiar      -> similar
 simmilar      -> similar
-singed        -> signed
 singel        -> single
 slighly       -> slightly
-somehwat      -> somewhat
 spectogram    -> spectrogram
 statment      -> statement
 stirng        -> string
@@ -439,6 +443,8 @@ swtich        -> switch
 symetric      -> symmetric
 teamplate     -> template
 tempalte      -> template
+htat          -> that
+taht          -> that
 theese        -> these
 therfore      -> therefore
 thign         -> thing
@@ -468,6 +474,8 @@ vaccuum       -> vacuum
 verticies     -> vertices
 virutal       -> virtual
 vitual        -> virtual
+hwat          -> what
+waht          -> what
 whcih         -> which
 whereever     -> wherever
 wherre        -> where

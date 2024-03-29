@@ -21,9 +21,10 @@
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 // #define QUICK_TAP_TERM 0
-#ifdef TAPPING_TERM
+
+#ifdef TAPPING_TERM // ms cooldown for tapdance
     #undef TAPPING_TERM
-    #define TAPPING_TERM 175
+    #define TAPPING_TERM 200
     #define TAPPING_TERM_PER_KEY
 #endif
 

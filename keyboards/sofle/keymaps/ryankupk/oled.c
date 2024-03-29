@@ -47,7 +47,7 @@ void print_status_narrow(void) {
     }
 
     oled_write_P(PSTR("\n"), false);
-    oled_write_P(PSTR("8===D"), false);
+    // oled_write_P(PSTR("8===D"), false);
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
