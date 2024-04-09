@@ -19,6 +19,9 @@ void print_status_narrow(void) {
         case _QWERTY:
             oled_write_P(PSTR("qwert"), false);
             break;
+        case _COLEMAKDH:
+            oled_write_P(PSTR("clmk\n"), false);
+            break;
         case _GAMING:
             oled_write_P(PSTR("game\n"), false);
             break;
