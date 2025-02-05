@@ -4,7 +4,7 @@
 
 ///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 
-#define MASTER_LEFT
+#define MASTER_RIGHT
 
 #define CUSTOM_FONT
 
@@ -24,7 +24,7 @@
 
 #ifdef TAPPING_TERM // ms cooldown for tapdance
     #undef TAPPING_TERM
-    #define TAPPING_TERM 200
+    #define TAPPING_TERM 280
     #define TAPPING_TERM_PER_KEY
 #endif
 

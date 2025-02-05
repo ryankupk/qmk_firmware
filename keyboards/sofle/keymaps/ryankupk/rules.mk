@@ -1,13 +1,13 @@
 
-MOUSEKEY_ENABLE = yes
-EXTRAKEY_ENABLE = yes
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
+MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes
 RGBLIGHT_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 LTO_ENABLE = yes # link-time optimization: slower compile, less memory
-OLED_ENABLE = yes
+OLED_ENABLE = no
 AUTOCORRECT_ENABLE = yes
-WPM_ENABLE = yes
+WPM_ENABLE = no
 CAPS_WORD_ENABLE = yes
 TAP_DANCE_ENABLE = yes

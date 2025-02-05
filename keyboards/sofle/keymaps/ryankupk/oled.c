@@ -11,16 +11,13 @@ char wpm_str[4];
 void print_status_narrow(void) {
     // Print current mode
     oled_write_P(PSTR("\n\n"), false);
-    oled_write_P(PSTR("Ryan\nKupka\n"), false);
+    // oled_write_P(PSTR("Ryan\nKupka\n"), false);
 
     oled_write_P(PSTR("\n"), false);
 
     switch (get_highest_layer(default_layer_state)) {
         case _QWERTY:
             oled_write_P(PSTR("qwert"), false);
-            break;
-        case _COLEMAKDH:
-            oled_write_P(PSTR("clmk\n"), false);
             break;
         case _GAMING:
             oled_write_P(PSTR("game\n"), false);
@@ -50,7 +47,6 @@ void print_status_narrow(void) {
     }
 
     oled_write_P(PSTR("\n"), false);
-    // oled_write_P(PSTR("8===D"), false);
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
