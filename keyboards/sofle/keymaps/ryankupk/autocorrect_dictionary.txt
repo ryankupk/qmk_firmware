@@ -71,6 +71,8 @@ accesories    -> accessories
 accomadate    -> accommodate
 accommadate   -> accommodate
 accomodate    -> accommodate
+acomodate     -> accommodate
+acomadate     -> accommodate
 accross       -> across
 acheive       -> achieve
 acommadate    -> accommodate
@@ -88,6 +90,7 @@ aganist       -> against
 aggreed       -> agreed
 agianst       -> against
 ahppn         -> happen
+albe:         -> able
 aledge        -> allege
 alegiance     -> allegiance
 alledge       -> allege
@@ -99,6 +102,7 @@ alwasy        -> always
 alwyas        -> always
 amatuer       -> amateur
 amature       -> amateur
+ammend        -> amend
 anohter       -> another
 anomolous     -> anomalous
 anomoly       -> anomaly
@@ -119,7 +123,6 @@ auxillary     -> auxiliary
 auxilliary    -> auxiliary
 availabe      -> available
 availaible    -> available
-availalbe     -> available
 availble      -> available
 availiable    -> available
 avalable      -> available
