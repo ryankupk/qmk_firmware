@@ -8,20 +8,6 @@
 #define HSV_RAISE           222, 255, 160 // ROSE
 #define HSV_ADJUST          127, 255, 160 // CYAN
 
-// Convert HSV values to RGB for direct setting
-#define RGB_QWERTY          rgblight_HSVtoRGB(HSV_QWERTY)
-#define RGB_GAMING          rgblight_HSVtoRGB(HSV_GAMING)
-#define RGB_LOWER           rgblight_HSVtoRGB(HSV_LOWER)
-#define RGB_RAISE           rgblight_HSVtoRGB(HSV_RAISE)
-#define RGB_ADJUST          rgblight_HSVtoRGB(HSV_ADJUST)
-
-// Function to convert HSV to RGB
-uint32_t rgblight_HSVtoRGB(uint8_t hue, uint8_t sat, uint8_t val) {
-    // Convert HSV to RGB using the existing QMK function
-    RGB rgb = hsv_to_rgb((HSV){hue, sat, val});
-    return ((uint32_t)rgb.r << 16) | ((uint32_t)rgb.g << 8) | rgb.b;
-}
-
 // Directly set all LEDs to a specific color
 void set_layer_color(uint8_t h, uint8_t s, uint8_t v) {
     rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT); // Set to static mode
