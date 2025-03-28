@@ -1,136 +1,62 @@
 #pragma once
 
-// Separate brightness for left and right indicators
-#define LEFT_INDICATOR_BRIGHTNESS 15
-#define RIGHT_INDICATOR_BRIGHTNESS 15
+// Define colors for each layer (HSV values)
+#define HSV_QWERTY          169, 255, 160 // BLUE
+#define HSV_GAMING          106, 255, 160 // SPRING GREEN
+#define HSV_GAMING_WASD     222, 255, 160 // ROSE
+#define HSV_LOWER           222, 255, 160 // ROSE
+#define HSV_RAISE           222, 255, 160 // ROSE
+#define HSV_ADJUST          127, 255, 160 // CYAN
 
-#define HSV_OVERRIDE_HELP(h, s, v, Override) h, s , Override
-#define HSV_OVERRIDE(hsv, Override) HSV_OVERRIDE_HELP(hsv,Override)
+// Convert HSV values to RGB for direct setting
+#define RGB_QWERTY          rgblight_HSVtoRGB(HSV_QWERTY)
+#define RGB_GAMING          rgblight_HSVtoRGB(HSV_GAMING)
+#define RGB_LOWER           rgblight_HSVtoRGB(HSV_LOWER)
+#define RGB_RAISE           rgblight_HSVtoRGB(HSV_RAISE)
+#define RGB_ADJUST          rgblight_HSVtoRGB(HSV_ADJUST)
 
-// Light combinations
-#define SET_INDICATORS(hsv) \
-    {0, 1, HSV_OVERRIDE_HELP(hsv, LEFT_INDICATOR_BRIGHTNESS)}, \
-    {35+0, 1, HSV_OVERRIDE_HELP(hsv, RIGHT_INDICATOR_BRIGHTNESS)}
-#define SET_UNDERGLOW(hsv) \
-    {1, 6, hsv}, \
-    {35+1, 6, hsv}
-#define SET_NUMROW(hsv) \
-    {10, 2, hsv}, \
-    {20, 2, hsv}, \
-    {30, 2, hsv}, \
-    {35+10, 2, hsv}, \
-    {35+20, 2, hsv}, \
-    {35+30, 2, hsv}
-#define SET_INNER_COL(hsv) \
-    {33, 4, hsv}, \
-    {35+33, 4, hsv}
-#define SET_OUTER_COL(hsv) \
-    {7, 4, hsv}, \
-    {35+7, 4, hsv}
-#define SET_THUMB_CLUSTER(hsv) \
-    {25, 2, hsv}, \
-    {35+25, 2, hsv}
+// Function to convert HSV to RGB
+uint32_t rgblight_HSVtoRGB(uint8_t hue, uint8_t sat, uint8_t val) {
+    // Convert HSV to RGB using the existing QMK function
+    RGB rgb = hsv_to_rgb((HSV){hue, sat, val});
+    return ((uint32_t)rgb.r << 16) | ((uint32_t)rgb.g << 8) | rgb.b;
+}
 
-// QWERTY layer uses cool colors
-#define HSV_QWERTY_BASE     170, 255, 255    // Blue base
-#define HSV_QWERTY_ACCENT   190, 255, 255    // Cyan accent
-
-// Gaming layer uses warm colors
-#define HSV_GAMING_BASE     0, 255, 255      // Red base
-#define HSV_GAMING_ACCENT   28, 255, 255     // Orange-red accent
-
-// Utility layers use purple theme
-#define HSV_UTILITY_BASE    213, 255, 255    // Purple base
-#define HSV_UTILITY_RAISE   223, 255, 255    // Light purple for Raise
-#define HSV_UTILITY_LOWER   203, 255, 255    // Dark purple for Lower
-#define HSV_UTILITY_ADJUST  193, 255, 255    // Magenta-purple for Adjust
-
-// QWERTY layer with animation-friendly configuration
-const rgblight_segment_t PROGMEM layer_qwerty_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-    SET_INDICATORS(HSV_QWERTY_BASE),
-    SET_UNDERGLOW(HSV_QWERTY_ACCENT),
-    SET_NUMROW(HSV_QWERTY_ACCENT),
-    SET_INNER_COL(HSV_QWERTY_ACCENT),
-    SET_OUTER_COL(HSV_QWERTY_ACCENT),
-    SET_THUMB_CLUSTER(HSV_QWERTY_ACCENT)
-);
-
-// Gaming layer with distinct warm colors
-const rgblight_segment_t PROGMEM layer_gaming_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-    SET_INDICATORS(HSV_GAMING_BASE),
-    SET_UNDERGLOW(HSV_GAMING_ACCENT),
-    SET_NUMROW(HSV_GAMING_BASE),
-    SET_INNER_COL(HSV_GAMING_BASE),
-    SET_OUTER_COL(HSV_GAMING_BASE),
-    SET_THUMB_CLUSTER(HSV_GAMING_ACCENT)
-);
-
-// Lower layer - darker purple
-const rgblight_segment_t PROGMEM layer_lower_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-    SET_INDICATORS(HSV_UTILITY_BASE),
-    SET_UNDERGLOW(HSV_UTILITY_LOWER),
-    SET_NUMROW(HSV_UTILITY_LOWER),
-    SET_INNER_COL(HSV_UTILITY_LOWER),
-    SET_OUTER_COL(HSV_UTILITY_LOWER),
-    SET_THUMB_CLUSTER(HSV_UTILITY_LOWER)
-);
-
-// Raise layer - lighter purple
-const rgblight_segment_t PROGMEM layer_raise_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-    SET_INDICATORS(HSV_UTILITY_BASE),
-    SET_UNDERGLOW(HSV_UTILITY_RAISE),
-    SET_NUMROW(HSV_UTILITY_RAISE),
-    SET_INNER_COL(HSV_UTILITY_RAISE),
-    SET_OUTER_COL(HSV_UTILITY_RAISE),
-    SET_THUMB_CLUSTER(HSV_UTILITY_RAISE)
-);
-
-// Adjust layer - magenta-purple
-const rgblight_segment_t PROGMEM layer_adjust_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-    SET_INDICATORS(HSV_UTILITY_BASE),
-    SET_UNDERGLOW(HSV_UTILITY_ADJUST),
-    SET_NUMROW(HSV_UTILITY_ADJUST),
-    SET_INNER_COL(HSV_UTILITY_ADJUST),
-    SET_OUTER_COL(HSV_UTILITY_ADJUST),
-    SET_THUMB_CLUSTER(HSV_UTILITY_ADJUST)
-);
-
-const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
-    layer_qwerty_lights,
-    layer_gaming_lights,
-    layer_lower_lights,
-    layer_raise_lights,
-    layer_adjust_lights
-);
+// Directly set all LEDs to a specific color
+void set_layer_color(uint8_t h, uint8_t s, uint8_t v) {
+    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT); // Set to static mode
+    rgblight_sethsv_noeeprom(h, s, v);                  // Set all LEDs to this color
+}
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    // Clear all layers first
-    rgblight_set_layer_state(0, false);
-    rgblight_set_layer_state(1, false);
-    rgblight_set_layer_state(2, false);
-    rgblight_set_layer_state(3, false);
-    rgblight_set_layer_state(4, false);
-
-    // Then set the active layer
-    if (layer_state_cmp(state, _GAMING)) {
-        rgblight_set_layer_state(1, true);
-    } else if (layer_state_cmp(state, _LOWER)) {
-        rgblight_set_layer_state(2, true);
-    } else if (layer_state_cmp(state, _RAISE)) {
-        rgblight_set_layer_state(3, true);
-    } else if (layer_state_cmp(state, _ADJUST)) {
-        rgblight_set_layer_state(4, true);
+    // Get the highest active layer
+    uint8_t highest_layer = get_highest_layer(state);
+    
+    // Check default layer state for persistent layers
+    uint8_t default_layer = get_highest_layer(default_layer_state);
+    
+    // Handle all layers by directly setting colors
+    if (highest_layer == _ADJUST) {
+        set_layer_color(HSV_ADJUST);
+    } else if (highest_layer == _LOWER) {
+        set_layer_color(HSV_LOWER);
+    } else if (highest_layer == _RAISE) {
+        set_layer_color(HSV_RAISE);
+    } else if (default_layer == _GAMING) {
+        set_layer_color(HSV_GAMING);
     } else {
-        rgblight_set_layer_state(0, true); // Default to QWERTY
+        // Default to QWERTY
+        set_layer_color(HSV_QWERTY);
     }
     
     return state;
 }
 
 void keyboard_post_init_user(void) {
-    // Enable the LED layers
-    rgblight_layers = my_rgb_layers;
+    // Disable all animations and set to initial color
+    rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+    rgblight_sethsv(HSV_QWERTY);  // Set initial color to QWERTY blue
     
-    // Set default RGB mode to breathing effect for QWERTY layer
-    rgblight_mode(RGBLIGHT_MODE_BREATHING + 2); // +2 gives a medium breathing speed
+    // This is important - disable any layer indicators to prevent conflicts
+    rgblight_layers = NULL;
 }
