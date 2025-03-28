@@ -27,7 +27,7 @@
   _______, KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     _______, _______,  KC_8,    KC_9,    KC_0,   _______, \
   _______, KC_NO,  KC_NO,   KC_NO,  KC_NO,   KC_NO,                     KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, KC_NO,   KC_GRV , \
   _______, KC_NO,  KC_NO,   KC_NO,  KC_NO,   KC_NO,_______,     _______,_______, _______, KC_NO,   KC_NO,   KC_NO,   _______, \
-              _______, KC_LOWER, _______, _______, _______,    S(KC_ENT), _______, _______,  KC_HOME, KC_END \
+              _______, KC_RAISE, _______, _______, _______,    S(KC_ENT), _______, _______,  KC_HOME, KC_END \
 )
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
   KC_TRNS,  KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,   KC_F23,    KC_F24, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
-                 KC_TRNS, KC_LOWER, KC_SPC, KC_LGUI,   KC_TRNS,    KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS
+                 KC_TRNS, KC_RAISE, KC_SPC, KC_LGUI,   KC_TRNS,    KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS
   //            \--------+--------+--------+---------+-------|   |--------+---------+--------+---------+-------/
 ),
 
