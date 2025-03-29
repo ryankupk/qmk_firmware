@@ -1,12 +1,12 @@
 #pragma once
 
 // Define colors for each layer (HSV values)
-#define HSV_QWERTY          169, 255, 100 // BLUE
-#define HSV_GAMING          0,   255, 100 // RED
-#define HSV_GAMING_WASD     106, 255, 100 // SPRING GREEN
-#define HSV_LOWER           222, 255, 100 // ROSE
-#define HSV_RAISE           222, 255, 100 // ROSE
-#define HSV_ADJUST          127, 255, 100 // CYAN
+#define HSV_QWERTY          169, 255, 80 // BLUE
+#define HSV_GAMING          0,   255, 80 // RED
+#define HSV_GAMING_WASD     106, 255, 80 // SPRING GREEN
+#define HSV_LOWER           222, 255, 80 // ROSE
+#define HSV_RAISE           222, 255, 80 // ROSE
+#define HSV_ADJUST          127, 255, 80 // CYAN
 
 // Left half keys - adjusted based on systematic analysis
 #define LED_W       20
