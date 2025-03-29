@@ -1,39 +1,44 @@
 #pragma once
 
 // Define colors for each layer (HSV values)
-#define HSV_QWERTY          169, 255, 160 // BLUE
-#define HSV_GAMING          106, 255, 160 // SPRING GREEN
-#define HSV_GAMING_WASD     222, 255, 160 // ROSE 
-#define HSV_LOWER           222, 255, 160 // ROSE
-#define HSV_RAISE           222, 255, 160 // ROSE
-#define HSV_ADJUST          127, 255, 160 // CYAN
+#define HSV_QWERTY          169, 255, 100 // BLUE
+#define HSV_GAMING          0,   255, 100 // RED
+#define HSV_GAMING_WASD     106, 255, 100 // SPRING GREEN
+#define HSV_LOWER           222, 255, 100 // ROSE
+#define HSV_RAISE           222, 255, 100 // ROSE
+#define HSV_ADJUST          127, 255, 100 // CYAN
 
-// Define LED indices for Sofle keyboard
-// W, A, S, D, Raise, 1, 2, 3, and the Lower key on the right half
-#define LED_W       8
-#define LED_A       15
-#define LED_S       16
-#define LED_D       17
-#define LED_RAISE   28
-#define LED_1       7 
-#define LED_2       6
-#define LED_3       5
-#define LED_LOWER_RIGHT 33
+// Left half keys - adjusted based on systematic analysis
+#define LED_W       20
+#define LED_A       14
+#define LED_S       19
+#define LED_D       24
+#define LED_1       22
+#define LED_2       21
+#define LED_3       12
+#define LED_RAISE   17
+
+#define LED_LOWER_RIGHT 53  // Lower key on right half
 
 // Define lighting layer for gaming mode
 const rgblight_segment_t PROGMEM gaming_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    // Left half base color
-    {0, 30, HSV_GAMING},    // Set all LEDs to gaming color first
+    // Set all LEDs to off by default
+    {0, RGBLIGHT_LED_COUNT, HSV_OFF},
     
-    // WASD and other specific keys to different color
-    {LED_W, 1, HSV_GAMING_WASD},
-    {LED_A, 1, HSV_GAMING_WASD},
-    {LED_S, 1, HSV_GAMING_WASD},
-    {LED_D, 1, HSV_GAMING_WASD},
+    // Left half base color (LEDs 0-35)
+    {0, 36, HSV_GAMING},
+    
+    // Specific keys with highlighted color
+    {LED_W,     1, HSV_GAMING_WASD},
+    {LED_A,     1, HSV_GAMING_WASD},
+    {LED_S,     1, HSV_GAMING_WASD},
+    {LED_D,     1, HSV_GAMING_WASD},
     {LED_RAISE, 1, HSV_GAMING_WASD},
-    {LED_1, 1, HSV_GAMING_WASD},
-    {LED_2, 1, HSV_GAMING_WASD},
-    {LED_3, 1, HSV_GAMING_WASD},
+    {LED_1,     1, HSV_GAMING_WASD},
+    {LED_2,     1, HSV_GAMING_WASD},
+    {LED_3,     1, HSV_GAMING_WASD},
+    
+    // Right half - all LEDs off except lower key
     {LED_LOWER_RIGHT, 1, HSV_GAMING_WASD}
 );
 
