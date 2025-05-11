@@ -183,8 +183,7 @@ coform        -> conform
 cognizent     -> cognizant
 collegue      -> colleague
 comapny       -> company
-comitted      -> committed
-comittee      -> committee
+comit         -> commit
 comming:      -> coming
 commited      -> committed
 commitee      -> committee
@@ -197,6 +196,7 @@ contian       -> contain
 copywrite:    -> copyright
 cosnt         -> const
 coudl         -> could
+coutn         -> count
 decieve       -> deceive
 dervied       -> derived
 desicion      -> decision
@@ -263,6 +263,7 @@ harrass       -> harass
 heigher       -> higher
 heigth        -> height
 heirarchy     -> hierarchy
+hieght        -> height
 higest        -> highest
 howver        -> however
 hydogen       -> hydrogen
@@ -312,6 +313,7 @@ macthing      -> matching
 maintence     -> maintenance
 manefist      -> manifest
 mesage        -> message
+millennium    -> millenium
 miniscule     -> minuscule
 mischevious   -> mischievous
 mischevous    -> mischievous
@@ -485,6 +487,7 @@ whihc         -> which
 whlch         -> which
 widht         -> width
 wierd         -> weird
+wieght        -> weight
 wihch         -> which
 woudl         -> would
 yeasr         -> years
