@@ -4,6 +4,8 @@
 
 ///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+
 #define MASTER_RIGHT
 
 #define CUSTOM_FONT

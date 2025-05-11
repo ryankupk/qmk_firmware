@@ -1,3 +1,5 @@
+# Bootloader selection
+BOOTLOADER = rp2040
 
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
