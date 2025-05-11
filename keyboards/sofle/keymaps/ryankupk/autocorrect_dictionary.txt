@@ -57,7 +57,6 @@
 :usally       -> usually
 :wether       -> whether
 :yaers        -> years
-:yeasr        -> years
 abbout        -> about
 aberation     -> aberration
 abilties      -> abilities
@@ -488,4 +487,5 @@ widht         -> width
 wierd         -> weird
 wihch         -> which
 woudl         -> would
+yeasr         -> years
 yeild         -> yield
