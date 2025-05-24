@@ -451,7 +451,7 @@ teamplate     -> template
 tempalte      -> template
 htat          -> that
 taht          -> that
-:teh           -> the
+:teh          -> the
 theese        -> these
 therfore      -> therefore
 thign         -> thing
