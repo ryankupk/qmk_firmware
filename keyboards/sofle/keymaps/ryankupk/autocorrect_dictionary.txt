@@ -4,7 +4,6 @@
 :agred        -> agreed
 :ajust        -> adjust
 :alot:        -> a lot
-:andteh       -> and the
 :andthe       -> and the
 :anual        -> annual
 :asign        -> assign
@@ -197,6 +196,7 @@ copywrite:    -> copyright
 cosnt         -> const
 coudl         -> could
 coutn         -> count
+clt           -> ctl
 decieve       -> deceive
 dervied       -> derived
 desicion      -> decision
@@ -292,6 +292,7 @@ intrest       -> interest
 invliad       -> invalid
 jewelery      -> jewelry
 judgement     -> judgment
+kbue          -> kube
 laguage       -> language
 largst        -> largest
 learnign      -> learning
@@ -307,6 +308,7 @@ lisence       -> license
 lisense       -> license
 listner       -> listener
 littel        -> little
+liyt:         -> lity
 looses:       -> loses
 looup         -> lookup
 macthing      -> matching
@@ -449,6 +451,7 @@ teamplate     -> template
 tempalte      -> template
 htat          -> that
 taht          -> that
+:teh           -> the
 theese        -> these
 therfore      -> therefore
 thign         -> thing
@@ -459,6 +462,8 @@ thnigs        -> things
 thresold      -> threshold
 throught      -> thought
 tihkn         -> think
+tino:         -> tion
+toin          -> tion
 tkaes         -> takes
 todya         -> today
 toghether     -> together
