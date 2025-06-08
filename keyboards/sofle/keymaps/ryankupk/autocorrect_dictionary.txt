@@ -222,6 +222,8 @@ embeded       -> embedded
 encypt        -> encrypt
 entrepeneur   -> entreperneur
 entreprenur   -> entreperneur
+errro         -> error
+erorr         -> error
 excecut       -> execut
 excercise     -> exercise
 exhilerate    -> exhilarate
@@ -231,6 +233,7 @@ failse        -> false
 fales         -> false
 fasle         -> false
 feild         -> field
+fim:          -> vim
 finaly        -> finally
 firend        -> friend
 firts         -> first
@@ -424,11 +427,16 @@ secratary     -> secretary
 secretery     -> secretary
 seperat       -> separat
 sequnce       -> sequence
+serivce       -> service
+sercice       -> service
+servcie       -> service
 shoudl        -> should
+sohuld        -> should
 sieze         -> seize
 similiar      -> similar
 simmilar      -> similar
 singel        -> single
+sino          -> sion
 slighly       -> slightly
 spectogram    -> spectrogram
 statment      -> statement
@@ -462,7 +470,7 @@ thnigs        -> things
 thresold      -> threshold
 throught      -> thought
 tihkn         -> think
-tino:         -> tion
+tino          -> tion
 toin          -> tion
 tkaes         -> takes
 todya         -> today
@@ -477,6 +485,7 @@ typcial       -> typical
 udpate        -> update
 unkown        -> unknown
 unqiue        -> unique
+uold          -> ould
 ususally      -> usually
 vaccum        -> vacuum
 vaccuum       -> vacuum
