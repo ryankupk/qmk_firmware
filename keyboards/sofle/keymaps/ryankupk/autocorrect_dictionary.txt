@@ -460,6 +460,7 @@ tempalte      -> template
 htat          -> that
 taht          -> that
 :teh          -> the
+tha tit       -> that it
 theese        -> these
 therfore      -> therefore
 thign         -> thing
