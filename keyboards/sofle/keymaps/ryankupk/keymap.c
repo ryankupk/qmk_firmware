@@ -1,6 +1,6 @@
 // SOFLE RGB
 // compile command: qmk compile -kb sofle/rev1 -km ryankupk -e CONVERT_TO=promicro_rp2040 -j 4
-// flash command: qmk flash -kb sofle/rev1 -km ryankupk -e CONVERT_TO=promicro_rp2040 -j 4
+// flash command: qmk flash -kb sofle/rev1 -km ryankupk -e CONVERT_TO=rp2040_ce -j 4
 // generate autocorrect: qmk generate-autocorrect-data ryankupk/autocorrect_dictionary.txt -kb sofle -km ryankupk; from directory: qmk_firmware/keyboards/sofle/keymaps
 
 #include QMK_KEYBOARD_H
