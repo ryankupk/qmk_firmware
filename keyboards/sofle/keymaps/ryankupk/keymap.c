@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
   KC_LSFT,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,   KC_K,    KC_L,    KC_SCLN, KC_QUOTE,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
-  KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  KC_ENT,   KC_MS_BTN1,KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_EQUAL,
+  KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  KC_ENT,   MS_BTN1,KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_EQUAL,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
          KC_LALT, KC_LGUI, KC_RAISE, KC_RSFT, KC_BSPC,                      KC_ENT, KC_SPC , KC_LOWER, KC_LBRC, KC_RBRC
   //    \--------+--------+--------+---------+-------|                   |--------+---------+--------+---------+-------/
@@ -67,9 +67,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
   XXXXXXX, KC_QWERTY,AC_ON, XXXXXXX,XXXXXXX,  XXXXXXX,                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
-  RGB_TOG, RGB_HUI,RGB_SAI, RGB_VAI,  XXXXXXX,KC_GAMING,                  XXXXXXX ,XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  UG_TOGG, UG_HUEU,UG_SATU, UG_VALU,  XXXXXXX,KC_GAMING,                  XXXXXXX ,XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
-  RGB_MOD, RGB_HUD,RGB_SAD,RGB_VAD,   XXXXXXX,XXXXXXX,KC_F23,     KC_F24, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
+  UG_NEXT, UG_HUED,UG_SATD,UG_VALD,   XXXXXXX,XXXXXXX,KC_F23,     KC_F24, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
                    _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
     //            \--------+--------+--------+---------+-------|   |--------+---------+--------+---------+-------/

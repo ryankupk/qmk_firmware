@@ -23,7 +23,6 @@
 :guage        -> gauge
 :haev         -> have
 :hapen        -> happen
-:htere        -> there
 :htikn        -> think
 :htink        -> think
 :hwihc        -> which
@@ -88,6 +87,7 @@ aganist       -> against
 aggreed       -> agreed
 agianst       -> against
 ahppn         -> happen
+ahve          -> have
 albe:         -> able
 aledge        -> allege
 alegiance     -> allegiance
@@ -101,7 +101,6 @@ alwyas        -> always
 amatuer       -> amateur
 amature       -> amateur
 ammend        -> amend
-anohter       -> another
 anomolous     -> anomalous
 anomoly       -> anomaly
 anytying      -> anything
@@ -109,6 +108,7 @@ aparent       -> apparent
 aparrent      -> apparent
 apparant      -> apparent
 apparrent     -> apparent
+apprao        -> approa
 aquaintance   -> acquaintance
 aquire        -> acquire
 aroud         -> around
@@ -242,7 +242,6 @@ flase         -> false
 follwo        -> follow
 foriegn       -> foreign
 foward        -> forward
-fraciton      -> fraction
 freind        -> friend
 frequecy      -> frequency
 fromthe       -> from the
@@ -293,6 +292,7 @@ interator     -> iterator
 intput        -> input
 intrest       -> interest
 invliad       -> invalid
+iton          -> tion
 jewelery      -> jewelry
 judgement     -> judgment
 kbue          -> kube
@@ -318,6 +318,9 @@ macthing      -> matching
 maintence     -> maintenance
 manefist      -> manifest
 mesage        -> message
+emtn          -> ment
+emnt          -> ment
+metn          -> ment
 millennium    -> millenium
 miniscule     -> minuscule
 mischevious   -> mischievous
@@ -365,7 +368,8 @@ perphas       -> perhaps
 persue        -> pursue
 poeople       -> people
 poeple        -> people
-poitner       -> pointer
+poitn         -> point
+opint         -> point
 posess        -> possess
 possesion     -> possession
 postion       -> position
@@ -440,6 +444,7 @@ sino          -> sion
 slighly       -> slightly
 spectogram    -> spectrogram
 statment      -> statement
+satnd         -> stand
 stirng        -> string
 stregth       -> strength
 strengh       -> strength
@@ -448,6 +453,7 @@ succesful     -> successful
 successfull:  -> successful
 succsess      -> success
 sucess        -> success
+suffic:       -> suffix
 sugest        -> suggest
 sumary        -> summary
 supress       -> suppress
@@ -460,14 +466,16 @@ tempalte      -> template
 htat          -> that
 taht          -> that
 :teh          -> the
+:hte           -> the
 tha tit       -> that it
 theese        -> these
 therfore      -> therefore
 thign         -> thing
 thigsn        -> things
+thnigs        -> things
+tihng         -> thing
 thikn         -> think
 thiunk        -> think
-thnigs        -> things
 thresold      -> threshold
 throught      -> thought
 tihkn         -> think
@@ -482,6 +490,7 @@ tommorow      -> tomorrow
 tommorrow     -> tomorrow
 tongiht       -> tonight
 tranpose      -> transpose
+traffice      -> traffic
 typcial       -> typical
 udpate        -> update
 unkown        -> unknown
@@ -495,6 +504,7 @@ virutal       -> virtual
 vitual        -> virtual
 hwat          -> what
 waht          -> what
+weq           -> wq
 whcih         -> which
 whereever     -> wherever
 wherre        -> where
