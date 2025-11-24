@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-// qmk flash -kb sofle_choc -km default -e CONVERT_TO=rp2040_ce -j 4
+// qmk flash -kb sofle_choc -km ryankupk -e CONVERT_TO=rp2040_ce -j 4
 #include QMK_KEYBOARD_H
 
 #include "common.h"
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
   KC_LSFT,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,   KC_K,    KC_L,    KC_SCLN, KC_QUOTE,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
-  KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  KC_ENT,   KC_MS_BTN1,KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_EQUAL,
+  KC_LCTL,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  KC_ENT,     MS_BTN1,KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_EQUAL,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
          KC_LALT, KC_LGUI, KC_RAISE, KC_RSFT, KC_BSPC,                      KC_ENT, KC_SPC , KC_LOWER, KC_LBRC, KC_RBRC
   //    \--------+--------+--------+---------+-------|                   |--------+---------+--------+---------+-------/
@@ -61,11 +61,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,------------------------------------------------.                    ,---------------------------------------------------.
   EE_CLR,  XXXXXXX, XXXXXXX, XXXXXXX,LALT(KC_F4),XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
-  XXXXXXX, KC_QWERTY,AC_ON, XXXXXXX,XXXXXXX,  XXXXXXX,                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, KC_QWERTY,AC_ON, XXXXXXX,XXXXXXX,  XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
-  RGB_TOG, RGB_HUI,RGB_SAI, RGB_VAI,  XXXXXXX,KC_GAMING,                  XXXXXXX ,XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  UG_TOGG, UG_HUEU,UG_SATU, UG_VALU,  XXXXXXX,KC_GAMING,                  XXXXXXX ,XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
-  RGB_MOD, RGB_HUD,RGB_SAD,RGB_VAD,   XXXXXXX,XXXXXXX,KC_F23,     KC_F24, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
+  UG_NEXT, UG_HUED,UG_SATD,UG_VALD,   XXXXXXX,XXXXXXX,KC_F23,     KC_F24, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
                    _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
     //            \--------+--------+--------+---------+-------|   |--------+---------+--------+---------+-------/
@@ -117,9 +117,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // encoders
 #define NUM_DIRECTIONS 2
-#define ENCODER_CONFIG { ENCODER_CCW_CW(S(KC_TAB), KC_TAB), ENCODER_CCW_CW(KC_WH_U, KC_WH_D) }
+#define ENCODER_CONFIG { ENCODER_CCW_CW(S(KC_TAB), KC_TAB), ENCODER_CCW_CW(MS_WHLU, MS_WHLD) }
 #define GAMING_ENCODER_CONFIG { ENCODER_CCW_CW(KC_MPRV, KC_MNXT), ENCODER_CCW_CW(KC_MPRV, KC_MNXT) }
-#define ENCODER_INVERSE_CONFIG { ENCODER_CCW_CW(C(S(KC_TAB)), C(KC_TAB)), ENCODER_CCW_CW(KC_WH_U, KC_WH_D) }
+#define ENCODER_INVERSE_CONFIG { ENCODER_CCW_CW(C(S(KC_TAB)), C(KC_TAB)), ENCODER_CCW_CW(MS_WHLU, MS_WHLD) }
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_QWERTY] = ENCODER_CONFIG,
