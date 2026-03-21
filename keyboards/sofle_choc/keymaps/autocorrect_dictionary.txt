@@ -1,4 +1,4 @@
-# qmk generate-autocorrect-data keymaps/autocorrect_dictionary.txt -kb sofle_choc -km ryankupk
+# qmk generate-autocorrect-data keyboards/sofle/keymaps/ryankupk/autocorrect_dictionary.txt -kb sofle_choc -km ryankupk
 :acheiv       -> achiev
 :agian        -> again
 :agred        -> agreed
@@ -292,6 +292,8 @@ interator     -> iterator
 intput        -> input
 intrest       -> interest
 invliad       -> invalid
+isntr         -> instr
+isntead       -> instead
 iton          -> tion
 jewelery      -> jewelry
 judgement     -> judgment
