@@ -55,6 +55,7 @@
 :usally       -> usually
 :wether       -> whether
 :yaers        -> years
+ tto          -> t to
 abbout        -> about
 aberation     -> aberration
 abilties      -> abilities
@@ -292,6 +293,8 @@ interator     -> iterator
 intput        -> input
 intrest       -> interest
 invliad       -> invalid
+isntr         -> instr
+isntead       -> instead
 iton          -> tion
 jewelery      -> jewelry
 judgement     -> judgment
@@ -504,7 +507,6 @@ virutal       -> virtual
 vitual        -> virtual
 hwat          -> what
 waht          -> what
-weq           -> wq
 whcih         -> which
 whereever     -> wherever
 wherre        -> where
